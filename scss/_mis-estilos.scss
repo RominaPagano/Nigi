@@ -1,0 +1,107 @@
+/* Texto*/
+.tituloPreguntas{
+    color: lightcoral;
+    margin-bottom: 5vh;
+    font-size: 7vh;
+}
+h1{
+    font-size: 22px;
+    color: lightcoral;
+}
+h2{
+    font-size: 22px;
+}
+
+
+
+//FLEXBOX CONTACTO Y PREGUNTAS
+
+.contenedorMain{
+    display: flex;
+    .contenedorFlex
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+    .contenedorAside{
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: black;
+        .fotoP{
+            width: 75vh;
+            height: 100vh;
+        }
+    }
+    .contenedorSection{
+        display: flex;
+        position: relative;
+        left: 100px;
+        top: 50px;
+        text-align: center;
+
+    }
+    .textoP{
+        margin: 10vh 0vh 0vh 10vh;
+        
+    }
+    .tamañofotoContacto{
+        width: 30rem;
+        height: 50rem;
+    }
+}
+
+.alaIzq{
+    text-align: left;
+    margin-left: 8vh;
+    
+}
+
+.textoC{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+/*TRANSICIONES*/
+
+.trans {
+    transition: all 1ms;
+}
+.trans:hover { 
+    font-size: 30px;
+    color: orange;
+    }
+
+.transTienda{
+    transition:all 1ms;
+}
+.transTienda:hover{
+    transform: scale(2);
+    position: relative;
+}
+
+/*BUCLES*/
+@mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+  
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        @if $columns > 0 {
+          @for $i from 1 through $columns {
+            .g-col#{$infix}-#{$i} {
+              grid-column: auto / span $i;
+            }
+          }
+  
+          
+          @for $i from 1 through ($columns - 1) {
+            .g-start#{$infix}-#{$i} {
+              grid-column-start: $i;
+            }
+          }
+        }
+      }
+    }
+  }
