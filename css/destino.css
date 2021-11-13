@@ -4935,9 +4935,6 @@ h2, .h2 {
     text-align: center; }
   .contenedorMain .textoP {
     margin: 10vh 0vh 0vh 10vh; }
-  .contenedorMain .tamañofotoContacto {
-    width: 30rem;
-    height: 50rem; }
 
 .alaIzq {
   text-align: left;
@@ -4962,7 +4959,25 @@ h2, .h2 {
   transform: scale(2);
   position: relative; }
 
-/*BUCLES*/
+/*GRID CONTACTO*/
+.gridContacto {
+  display: grid;
+  grid-auto-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "fotoContacto formulario"; }
+
+/*Nombre de areas*/
+.fotoContacto {
+  grid-area: fotoContacto; }
+
+.formulario {
+  grid-area: formulario;
+  margin-top: 2rem; }
+
+.tamañofotoContacto {
+  width: 40rem;
+  height: 60rem; }
+
 .clearfix::after {
   display: block;
   clear: both;
