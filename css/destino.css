@@ -4914,6 +4914,8 @@ h1, .h1 {
 h2, .h2 {
   font-size: 22px; }
 
+/*RESPONSIVE PREGUNTAS Y CONTACTO*/
+/*Desktop*/
 .contenedorMain {
   display: flex; }
   .contenedorMain .contenedorFlex {
@@ -4944,21 +4946,6 @@ h2, .h2 {
   font-size: 18px;
   font-weight: bold; }
 
-/*TRANSICIONES*/
-.trans {
-  transition: all 1ms; }
-
-.trans:hover {
-  font-size: 30px;
-  color: orange; }
-
-.transTienda {
-  transition: all 1ms; }
-
-.transTienda:hover {
-  transform: scale(2);
-  position: relative; }
-
 /*GRID CONTACTO*/
 .gridContacto {
   display: grid;
@@ -4977,6 +4964,44 @@ h2, .h2 {
 .tamañofotoContacto {
   width: 40rem;
   height: 60rem; }
+
+/*Tablet*/
+@media (min-width: 600px) and (max-width: 1023px) {
+  /*PREGUNTAS*/
+  .fotoP {
+    display: none; }
+  /*CONTACTO*/
+  .gridContacto {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: "formulario"; }
+  /*Nombre de areas*/
+  .formulario {
+    grid-area: formulario;
+    margin-left: 2vh;
+    margin-right: 2vh; }
+  .tamañofotoContacto {
+    display: none; } }
+
+/*Smartphone*/
+@media (max-width: 599px) {
+  /*PREGUNTAS*/
+  .fotoP {
+    display: none; }
+  /*CONTACTO*/
+  .gridContacto {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: "formulario"; }
+  /*Nombre de areas*/
+  .formulario {
+    grid-area: formulario;
+    margin-left: 2vh;
+    margin-right: 2vh; }
+  .tamañofotoContacto {
+    display: none; } }
 
 .clearfix::after {
   display: block;
