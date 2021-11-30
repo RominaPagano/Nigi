@@ -4996,14 +4996,13 @@ h2, .h2 {
   /*CONTACTO*/
   .gridContacto {
     display: grid;
-    grid-auto-columns: 100fr;
+    grid-auto-columns: 100%;
     grid-template-rows: 100%;
     grid-template-areas: "formulario"; }
   /*Nombre de areas*/
   .formulario {
     grid-area: formulario;
-    margin-left: 2vh;
-    margin-right: 2vh; }
+    margin-left: 2vh; }
   .tamañofotoContacto {
     display: none; } }
 
