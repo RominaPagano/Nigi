@@ -4914,6 +4914,10 @@ h1, .h1 {
 h2, .h2 {
   font-size: 22px; }
 
+/*Tienda*/
+.fotoTienda {
+  object-fit: cover; }
+
 /*RESPONSIVE PREGUNTAS Y CONTACTO*/
 /*Desktop*/
 .contenedorMain {
